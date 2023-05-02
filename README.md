@@ -31,11 +31,25 @@ Recommended Python version: 3.8. Compatible with up to version 3.10, but newer v
 
 The script requires the following libraries to run: PsychoPy, TurkishStemmer| https://github.com/otuncelli/turkish-stemmer-python, Syllable Encoder (for Turkish)| https://github.com/ftkurt/python-syllable, Uk_Stemmer|https://github.com/Desklop/Uk_Stemmer, ukrsyllab.py (provided in the current repository), re, random, and ast. 
 
+The repository includes the requirements.txt file listing all the dependencies for this specific project.
+
 #### How to Run the Script?
 
 After fulfilling all code dependencies, open and run the script in your Python interpreter. 
 
-Note: Do not attempt to run it on Google Colab, as the newest Python version used there will not support the code. Running the script will display a window as shown below:
+**Note**: Do not attempt to run it on Google Colab, as the newest Python version used there will not support the code. 
+
+**Note**: Running Scripts with a GUI on MacOS within a virtual environment produces an error.\
+To avoid this, first install the python.app binary/wxPython:
+```
+conda install python.app
+```
+Then, run the script with the following command:
+```
+pythonw jabberwocky_sentence_generator.py
+```
+
+Running the script will display a window as shown below:
 
 <img width="477" alt="1" src="https://user-images.githubusercontent.com/126243859/235170272-9363755d-e82c-4376-adfe-1037fe603e52.png">
 
