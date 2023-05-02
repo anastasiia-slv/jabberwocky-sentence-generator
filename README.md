@@ -39,7 +39,7 @@ After fulfilling all code dependencies, open and run the script in your Python i
 
 **Note**: Do not attempt to run it on Google Colab, as the newest Python version used there will not support the code. 
 
-**Note**: Running Scripts with a GUI on MacOS within a virtual environment produces an error.\
+**Note**: Running scripts with a GUI on MacOS within a virtual environment produces an error.\
 To avoid this, first install the python.app binary/wxPython:
 ```
 conda install python.app
