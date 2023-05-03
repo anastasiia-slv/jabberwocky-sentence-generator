@@ -186,7 +186,7 @@ class Turkish_jabberwocky(Pseudoword_gen):
             number of Jabberwocky sentences to be generated, the default value 
             is 5
     """
-    super().__init__(filename, n_words=300, n_sent=5)
+    super().__init__(filename, n_words, n_sent)
 
     self.stems = [] #The empty list that will be appended with stems
     for w in self.words[:50000]: #We are only taking a slice, because the actual database has more than 300.000 words that it takes a lot of time to run.
