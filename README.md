@@ -13,7 +13,7 @@ This project seeks to to create additional resources for linguistic research on 
 
 Our project aims to create pseudowords and Jabberwocky sentences in Turkish and Ukrainian. 
 Script:
-1.   Uses GUI to take user inputs for language, number of pseudowords and Jabberwocky sentences
+1.   Takes user inputs for language, number of pseudowords and Jabberwocky sentences from Python console
 2.   Takes dataset of existing words in selected language
 3. Cleans up words from inflectional affixes
 4. Separates words into natural morphemes
@@ -36,7 +36,6 @@ In order to install them manually:
 pip install TurkishStemmer
 pip install git+https://github.com/ftkurt/python-syllable.git@master 
 pip install git+https://github.com/Desklop/Uk_Stemmer 
-pip install psychopy
 ```
 
 Alternatively, the repository includes the requirements.txt file listing all the dependencies for this specific project.
@@ -68,17 +67,16 @@ Then, run the script with the following command:
 pythonw jabberwocky_sentence_generator.py
 ```
 
-Running the script will display a window as shown below:
+When the script is run, it will ask for inputs from the python console. Those inputs will include:
+* language of the jabberwocky sentences
+* the number of the pseudowords to be generated
+* the number of the sentences to be generated
+* the name of the output file
 
-<img width="477" alt="1" src="https://user-images.githubusercontent.com/126243859/235170272-9363755d-e82c-4376-adfe-1037fe603e52.png">
+**Language of the jabberwocky sentences**
 
-In this pop-up window, three sets of information is required from the user:
+User must enter one of the languages presented inside the paranthesis as input to choose the language of the jabberwocky sentences. The input is case insensitive. This field also provides a "quit" option to user, if the user wants to quit the program, they can do so by typing "q" to the field. 
 
-**Language**
-
-The script presents a multiple choice area for selecting language to generate Jabberwocky sentences. User can click the area and choose desired language from available options, which currently include only Turkish and Ukrainian.
-
-<img width="478" alt="2" src="https://user-images.githubusercontent.com/126243859/235171181-75d7eeba-d580-4c6a-b1b9-9e7223cd3cd4.png">
 
 **Number of pseudowords to be generated**
 
@@ -88,13 +86,13 @@ User must enter an integer value in this field to specify the number of pseudowo
 
 User must enter an integer value in this field to specify the number of Jabberwocky sentences they want to generate. The default value is 5.
 
-**Note:** If a non-integer value is entered in the pseudowords or Jabberwocky sentences fields, an error message will appear asking the user to input an integer value. The initial pop-up window for user preferences will reappear, and this process will continue until the user inputs integer values.
+**Name of the output file**
+User must enter a string that would be used as the name of the output file. Output file will be named "[filename].txt".
 
-<img width="480" alt="3" src="https://user-images.githubusercontent.com/126243859/235171264-b044e412-9bbf-4f30-844a-f9546faf30b0.png">
+**Note:** If a language that does not exist in the program is entered, an error message will appear asking the user to input one of the languages of the program and input field for language will reappear. This process will continue until a language in the program is entered. Furthermore, if a non-integer value is entered in the pseudowords or Jabberwocky sentences fields, an error message will appear asking the user to input an integer value. The input field for the non-integer value will reappear, and this process will continue until the user inputs integer values.
 
-<img width="367" alt="4" src="https://user-images.githubusercontent.com/126243859/235171302-089e2fd0-8a7d-46b2-b119-808b3ff82825.png">
 
-Upon providing necessary information, the code will generate Jabberwocky sentences in the chosen language and write them to a txt file named "language_Jabberwockysent.txt".
+Upon providing necessary information, the code will generate Jabberwocky sentences in the chosen language and write them to a txt file named according to the user input.
 
 #### The Structure of the Script
 
