@@ -77,17 +77,32 @@ When the script is run, it will ask for inputs from the python console. Those in
 
 User must enter one of the languages presented inside the paranthesis as input to choose the language of the jabberwocky sentences. The input is case insensitive. This field also provides a "quit" option to user, if the user wants to quit the program, they can do so by typing "q" to the field. 
 
+```
+Enter the language of the Jabberwocky sentences ('Turkish' or 'Ukrainian')(To quit enter 'q'):
+```
 
 **Number of pseudowords to be generated**
 
 User must enter an integer value in this field to specify the number of pseudowords they want to generate. The default value is 300.
 
+```
+Enter the number of pseudowords to be generated (The default value is 300) (The value entered should be an integer): 
+```
+
 **Number of sentences to be generated**
 
 User must enter an integer value in this field to specify the number of Jabberwocky sentences they want to generate. The default value is 5.
 
+```
+Enter the number of sentences to be generated (The default value is 5) (The value entered should be an integer):  
+```
+
 **Name of the output file**
 User must enter a string that would be used as the name of the output file. Output file will be named "[filename].txt".
+
+```
+Enter a name for the output file (It will be saved as [filename].txt):
+```
 
 **Note:** If a language that does not exist in the program is entered, an error message will appear asking the user to input one of the languages of the program and input field for language will reappear. This process will continue until a language in the program is entered. Furthermore, if a non-integer value is entered in the pseudowords or Jabberwocky sentences fields, an error message will appear asking the user to input an integer value. The input field for the non-integer value will reappear, and this process will continue until the user inputs integer values.
 
