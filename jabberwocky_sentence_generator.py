@@ -775,4 +775,5 @@ if lang.lower() != "q":
     f = open(f_name, "w", encoding="utf-8")
     for s in j_sent:
         f.write(s)
+    print('Done.')
     f.close()
