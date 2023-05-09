@@ -51,20 +51,9 @@ After fulfilling all code dependencies, open and run the script in your Python i
 
 **Note**: Do not attempt to run it on Google Colab, as the newest Python version used there will not support the code. 
 
-The script can be run in a regular way with any OS but MacOS. 
+The script can be run in a regular way with any OS. 
 ```
 python3 jabberwocky_sentence_generator.py
-```
-
-
-**Note**: Running scripts with a GUI on MacOS within a virtual environment produces an error.\
-To avoid this, first install the python.app binary/wxPython:
-```
-conda install python.app
-```
-Then, run the script with the following command:
-```
-pythonw jabberwocky_sentence_generator.py
 ```
 
 When the script is run, it will ask for inputs from the python console. Those inputs will include:
