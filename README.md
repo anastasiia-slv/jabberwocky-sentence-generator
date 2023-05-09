@@ -104,8 +104,23 @@ User must enter a string that would be used as the name of the output file. Outp
 Enter a name for the output file (It will be saved as [filename].txt):
 ```
 
-**Note:** If a language that does not exist in the program is entered, an error message will appear asking the user to input one of the languages of the program and input field for language will reappear. This process will continue until a language in the program is entered. Furthermore, if a non-integer value is entered in the pseudowords or Jabberwocky sentences fields, an error message will appear asking the user to input an integer value. The input field for the non-integer value will reappear, and this process will continue until the user inputs integer values.
+**Note:** If a language that does not exist in the program is entered, an error message will appear asking the user to input one of the languages of the program and input field for language will reappear. This process will continue until a language in the program is entered. 
 
+```
+You have entered a language that is not currently in the programme. Plase try again!
+Enter the language of the Jabberwocky sentences ('Turkish' or 'Ukrainian): 
+```
+
+Furthermore, if a non-integer value is entered in the pseudowords or Jabberwocky sentences fields, an error message will appear asking the user to input an integer value. The input field for the non-integer value will reappear, and this process will continue until the user inputs integer values.
+
+```
+The value that you have entered is not an integer. Please enter another number!
+Enter the number of pseudowords to be generated (The default value is 300) (The value entered should be an integer): 
+```
+```
+The value that you have entered is not an integer. Please enter another number!
+Enter the number of pseudowords to be generated (The default value is 5) (The value entered should be an integer): 
+```
 
 Upon providing necessary information, the code will generate Jabberwocky sentences in the chosen language and write them to a txt file named according to the user input.
 
