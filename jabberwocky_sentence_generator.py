@@ -13,7 +13,6 @@ import re, random
 from TurkishStemmer import TurkishStemmer #this function stems Turkish words 
 from uk_stemmer import UkStemmer #this function stems Ukrainian words
 from ast import literal_eval
-from psychopy import gui
 
 class Pseudoword_gen():
     
@@ -739,29 +738,41 @@ class Ukrainian_jabberwocky(Pseudoword_gen):
         p_sentences.append(self.sent_generator(word_categories)) #run function to create sentences
       return p_sentences
   
-#The code that opens up the GUI  
-dlg = gui.Dlg(title= "Jabberwocky Generator") #The title of the window
-dlg.addField("Language", choices=["Turkish", "Ukrainian"]) #Language options
-dlg.addField("Number of pseudowords to be generated", 300) #The number of pseudowords to be generated (default is 300)
-dlg.addField("Number of sentences to be generated", 5) #The number of jabberwocky sentences to be generated (default is 5)
-Udata = dlg.show() #To obtain GUI data as a list
-while type(Udata[1]) != int or type(Udata[2]) != int: #If a non-integer value is entered the GUI will appear until the integer values are entered
-    err_dlg = gui.Dlg(title='error message')
-    err_dlg.addText("Please enter an integer to the number of pseudoword and sentence fields")
-    err_dlg.show()
-    dlg = gui.Dlg(title= "Jabberwocky Generator")
-    dlg.addField("Language", choices=["Turkish", "Ukrainian"])
-    dlg.addField("Number of pseudowords to be generated", 300)
-    dlg.addField("Number of sentences to be generated", 5)
-    Udata = dlg.show()
+#The code for getting inputs from the user
+lang = input("Enter the language of the Jabberwocky sentences ('Turkish' or 'Ukrainian')(To quit enter 'q'): ") #Getting the language input from the user
+
+if lang.lower() != "q":
+
+    while lang.lower() not in ["turkish", "ukrainian"]: #If a language that does not exist in the program is entered
+        print("You have entered a language that is not currently in the programme. Plase try again!")
+        lang = input("Enter the language of the Jabberwocky sentences ('Turkish' or 'Ukrainian): ")
+
+    n_words = input("Enter the number of pseudowords to be generated (The default value is 300) (The value entered should be an integer): ") or "300" #If no input is entered by the user it will be 300 automatically
+    while True:
+        try:
+            n_words = int(n_words) #If an integer value is entered by the user
+            break
+        except: #If a non-integer value is entered by the user
+            print("The value that you have entered is not an integer. Please enter another number!")
+            n_words = input("Enter the number of pseudowords to be generated (The default value is 300) (The value entered should be an integer): ") or "300"
+        
+    n_sent = input("Enter the number of sentences to be generated (The default value is 5) (The value entered should be an integer): ") or "5" #If no input is entered by the user it will be 5
+    while True:
+        try:
+            n_sent = int(n_sent) #If an integer value is entered by the user
+            break
+        except: #If a non-integer value is entered by the user
+            print("The value that you have entered is not an integer. Please enter another number!")
+            n_sent = input("Enter the number of pseudowords to be generated (The default value is 5) (The value entered should be an integer): ") or "5"
+        
+    f_name = input("Enter a name for the output file (It will be saved as [filename].txt): ") + ".txt" #filename for the output file
     
-if Udata[0] == "Ukrainian": #If Ukrainian is selected 
-    j_sent = Ukrainian_jabberwocky("uk_UA.csv", int(Udata[1]), int(Udata[2])).run()
-elif Udata[0] == "Turkish": #If Turkish is selected
-    j_sent = Turkish_jabberwocky("tr_TR.csv", Udata[1], Udata[2]).run()
+    if lang.lower() == "ukrainian": #If Ukrainian is selected 
+        j_sent = Ukrainian_jabberwocky("uk_UA.csv", n_words, n_sent).run()
+    elif lang.lower() == "turkish": #If Turkish is selected
+        j_sent = Turkish_jabberwocky("tr_TR.csv", n_words, n_sent).run()
     
-f_name = Udata[0] + "_Jabberwockysent.txt" #To write down the obtained sentences
-f = open(f_name, "w", encoding="utf-8")
-for s in j_sent:
-    f.write(s)
-f.close()
+    f = open(f_name, "w", encoding="utf-8")
+    for s in j_sent:
+        f.write(s)
+    f.close()
