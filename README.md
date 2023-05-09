@@ -130,7 +130,7 @@ The script has a mother class, "Pseudoword_gen", with two daughter classes, "Tur
 
 The mother class includes a language-independent function called "probabilities", which is inherited by the daughter classes and can be used for multiple languages. It is independent of language structures, including the alphabet.
 
-Depending on the language chosen in the initial pop-up window, one of the daughter classes will be utilized. The daughter classes are motivated by unique linguistic characteristics of each language, and may differ slightly.
+Depending on the language entered in the input field, one of the daughter classes will be utilized. The daughter classes are motivated by unique linguistic characteristics of each language, and may differ slightly.
 
 | <sup>The Pseudoword_gen <br>Class</sup> |  | <sup>Turkish_jabberwocky <br>Class</sup> |  | <sup>Ukrainian_jabberwocky <br>Class</sup> |  |
 |---|---|---|---|---|---|
@@ -152,7 +152,7 @@ To extend the project to new languages:
 4. Implement a function that assigns pseudowords into syntactic categories and adds affixes based on the language's grammar rules.
 5. Implement Jabberwocky sentences creation function based on the language's word order rules.\
 Optional:
-6. Update the GUI to include the new language as an option.
+6. Update the input field to include the new language as an option.
 7. Modify the code to call the appropriate daughter class based on the user's language selection.
 
 *This project was created by Anastasiia Salova and Ecesu Ürker.*
