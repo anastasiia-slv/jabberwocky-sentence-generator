@@ -29,7 +29,7 @@ Script:
 
 Recommended Python version: 3.8. Compatible with up to version 3.10, but newer versions may not support necessary libraries.
 
-The script requires the following libraries to run: PsychoPy, TurkishStemmer| https://github.com/otuncelli/turkish-stemmer-python, Syllable Encoder (for Turkish)| https://github.com/ftkurt/python-syllable, Uk_Stemmer|https://github.com/Desklop/Uk_Stemmer, ukrsyllab.py (provided in the current repository), re, random, and ast. 
+The script requires the following libraries to run: TurkishStemmer| https://github.com/otuncelli/turkish-stemmer-python, Syllable Encoder (for Turkish)| https://github.com/ftkurt/python-syllable, Uk_Stemmer|https://github.com/Desklop/Uk_Stemmer, ukrsyllab.py (provided in the current repository), re, random, and ast. 
 
 In order to install them manually:
 ```
